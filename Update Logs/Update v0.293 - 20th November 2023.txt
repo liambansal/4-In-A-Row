@@ -1,0 +1,59 @@
+Improved Visuals; New VFX & Sounds; and More Fixes
+20th November 2023 - v0.293
+
+Description:
+The bulk of this update consists of visual improvements, changes, and additions such as new visual effects for using power-ups,
+cleaner UI, and more feedback when browsing menus. There are also some new sounds and several gameplay & networking fixes.
+
+Additions:
+- Added an explosion VFX for when the bomb power-up is used.
+- Added a trail VFX for counters which appears when they're moving.
+- Added new sound effects for when the bridge-gap, bomb, and fling power-ups are used.
+- Added some text to the gameplay scene's side-panel to track each player's score streaks.
+- A message will now be displayed on-screen: if no lobbies were found when searching for one; while a lobby is being created;
+	while a player is searching for a lobby to join; and while a player is joining a lobby.
+- Added a cancel button to the lobby creation menu.
+- Added coloured backgrounds to the join, ready, confirm, leave, and cancel lobby menu buttons.
+- Prefixed the lobby's name and password with a title in the lobby screen.
+
+Changes:
+- Created new sprites for the bridge-gap, bomb, and fling counters.
+- The power-up selection wheel's icons are now toggled on/off when a power-up is collected/uncollected.
+- Tethers are now drawn on top of the counters they're connecting, instead of behind them.
+- Improved the visual appearance and layout of the gameplay scene's side-panel.
+- All of the game's text now uses the same font and sizes.
+- The lobby search bar is now hidden when a player is: creating a lobby; and connected to a lobby.
+- The cursor's helper icon no longer displays the selected power-up if it isn't collected by the player.
+- Reduced how often tiles are updated when showing which tiles are interactable based on the player's selected power-up.
+- Removed the falling counters from the main menu's foreground.
+- Animated the main menu and side-panel's background counters to slowly enlarge and shrink over time, and applied a blur effect.
+- Repositioned the icons within the power-up selection wheel so they're all centred.
+- Smoothed out the edge around the power-up selection wheel's background.
+- Highlighted the inner portion of the 'highlighted circle' sprite.
+
+Fixes:
+- Fixed some data (native collections) not being disposed of when the game is closed, or a scene is loaded.
+- Fixed the host client not receiving the correct network ID for all joining clients after polling the lobby.
+- Fixed joining clients reading server data which they don't have permission to read from.
+- Fixed not being able to use the bridge-gap power-up to block an opponent's potential scoring line.
+- Fixed potentially destroying the wrong spring joint (tether) when a counter is untethered.
+- All clients can now see the tethers that connect counters when using the bridge-gap power-up.
+- Joining clients can now hear the sound effects of power-ups.
+- Fixed a player's score streak sometimes not resetting when an opponent scores points.
+- Fixed the client's network ID not being reset to the correct value when they leave a lobby.
+- Fixed the lobby creation settings not being visible after failing to create a lobby.
+- Fixed neither client loading the gameplay scene when one of them readies up prior to the joining client 
+	appearing on the host's lobby screen.
+- Fixed power-up counters not falling when the counter beneath is destroyed.
+- Fixed joining clients responding their their own incoming connection after joining a lobby.
+- Reset the timer for polling a lobby after the client disconnects.
+- Fixed the joining client not being removed from the host's lobby screen after they've left the lobby.
+- Fixed tethers being drawn after one of the counters has been destroyed.
+- Fixed tethers being drawn between a tethered counter's first and last connection.
+- Fixed tethers being drawn that connect counters to somewhere offscreen.
+- Fixed the helper cursor icon not disappearing for joining clients after they use a power-up.
+- Fixed the material that's being used for tethers not rendering correctly.
+- Fixed several null reference errors.
+
+Thanks for playing,
+Liam

@@ -1,0 +1,80 @@
+New Visual & Audio Feedback; Improved Networking Services
+3rd October 2023 - v0.28
+
+Description:
+The main features within this update are sound effects, animations, a pause menu, improved network reliability, and a 
+new & refreshed lobby screen which players can use to create password protected lobbys, search for any lobby using its 
+name, and view more details about each lobby.
+
+Additions:
+- Created an animation that enlarges and shrinks a counter when it's spawned.
+- Now playing sound effects when: a counter is spawned; a scoring line is created; and a scoring line is blocked.
+- Added a pause menu to the game, with controls for setting the game's SFX volume.
+- Added a new screen for defining a lobby's settings.
+- Added ability to create a password protected lobby.
+- Players can now search for and join a lobby using its name.
+- Players can now see how many players are connected to a lobby when searching.
+- Players can now see if a lobby is password protected when searching.
+- Players can now select a specific lobby to join based on the search results.
+- Pop-up messages now appear if: the user triggers an error/warning when interacting with the lobby screen;
+another client disconnects from a lobby or match.
+- Added some UI text elements to the main menu that display the game version and creator's name.
+
+Changes:
+- Combined the timeline and next turn image into one element.
+- The timeline's events now smoothly move from their current position to their next position when an event triggers.
+- Power-up counters can now squash other counters that are lighter than them.
+- Improved the disconnection process for removing a player from a lobby/match.
+- Lobbies that are in the process of being closed will no longer appear in the lobby search results.
+- Reduced the game's network traffic :)
+- Reduced the delay between readying up and other player seeing the state change.
+- Reduced the delay between all players readying up and loading into a match.
+- Players will now be returned to the main menu if their opponent disconnects when in a match.
+- Players will now only be able to play online with other players that are using the same version of the game.
+
+Fixes:
+Gameplay
+- Fixed a scenario where some scoring lines weren't registered and didn't give points when they shared some counters 
+with another scoring line.
+- Fixed scoring lines not being registered if they were created while a counter was being flung.
+- Fixed some counters being ignored when checking if all counters have stopped moving.
+- Fixed the first next turn event in the timeline starting with the wrong player.
+- Fixed a case where the timeline's events would not move forward.
+- Fixed the timeline events not being reset when the match is restarted.
+- Fixed the timeline's change of turn events not showing the correct player icons if several turns were taken in quick 
+succession.
+- Fixed counters not being squashed when a floating block is spawned on top of them with gravity enabled.
+- Fixed counters not being squashed when a tethered player counter is placed above it with gravity enabled.
+- Fixed counters not being squashed when heavier ones fall on top of them with gravity enabled.
+- Fixed the bridge-gap power-up not being usable along the edge of the grid.
+- Fixed scripts referencing the wrong objects for singleton classes.
+- Fixed duplicate game-objects being spawned when reloading the main menu.
+
+Networking
+- Fixed the player provided lobby details containing potentially unwanted characters.
+- Fixed an issue where a client could trigger a 'cannot connect to self' error when hosting a lobby.
+- Fixed multiple lobbies being able to use the same names.
+- Fixed the host client registering another player is connected when it's themselves that has joined the lobby.
+- Players will no longer join a lobby that's being deleted.
+- Fixed the client's game thinking they're still joining a lobby after they've already connecting to one.
+- Reduced the chances of clients triggering a 'resetting event queue' error when connecting to a lobby.
+- Fixed the player's ready-up icon flickering off and on when they ready up in the lobby screen.
+- Fixed newly connected player seeing the incorrect ready state for players who readied up prior to them connecting.
+- Fixed players disconnecting from the networking manager when leaving a lobby.
+- Fixed players still appearing in the lobby when they've disconnected.
+- Fixed the lobby's details being visible for a client after the host's game unexpectedly shuts down.
+- Fixed the host player not seeing their opponent in the lobby after their opponent disconnects and reconnects.
+- Fixed some networking events not being triggered for certain clients.
+- Fixed several rate limits being surpassed when contacting Unity's Relay and Lobby services.
+- Prevented the host from loading into a match prior to all player synchronising with them.
+- Fixed some network objects not being cleaned up when exiting the gameplay scene.
+- Fixed a client's player ID being empty after reloading the main menu.
+- Fixed several bugs that prevented either client from hosting a new match after returning to the main menu.
+
+Other
+- Fixed several null reference errors.
+
+Thanks for playing,
+Liam B
+
+p.s. visit https://www.liambansal.com for more information about the game and to download new versions.
