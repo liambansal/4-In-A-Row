@@ -32,8 +32,10 @@ processes before opening the game.
 game's features work as intended. Some of these errors are:
 - Error: 'Received a packet with an invalid pipeline'.
 - Error: 'Resetting event queue with pending events'.
+
 Other errors are produced by:
 - Entering an incorrect password when joining a lobby.
+
 Unfortunately, a fix for these issues isn't known at the time of this update's release.
 
 # ---------- Licensing ----------
