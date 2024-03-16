@@ -1,0 +1,108 @@
+Match Objectives & Statistics and More Feedback for Actions
+16th March 2024 - v0.337
+
+---------- Description ----------
+Hello again, this update introduces lots of new content like match objectives, a game-over screen, visual effects when 
+scoring points, a loading screen, sounds for squashing counters, animations, info about each counter and tile, and 
+makes some changes to balance and improve content. Oh, and there are more fixes too, hooray!
+
+
+---------- Additions ----------
+Gameplay
+- Added objectives for ending a match whether it's reaching a score threshold or playing for a certain number of turns.
+- Created new spawn animations for the grid of tiles and the side-panel when opening the gameplay scene.
+
+Audio
+- A new sound effect will play whenever a counter is squashed.
+
+UI
+- Created a game-over menu that shows match statistics, which appears upon finishing a game. Statistics include:
+	- The time spent playing by each player.
+	- The longest scoring line that was created by each player.
+	- The most points each player scored in a single turn.
+	- And more!
+	- The best match statistics are highlighted.
+- Counters that reward players with points will play a new visual effect.
+- Counters that block an opponent's potential scoring line will play a new visual effect.
+- Displayed the match's score & maximum turn objectives in the side-panel.
+- Hovering over a tile or counter with the cursor will now reveal information about its coordinates, owner, type, and 
+more.
+- Added a simple loading screen between changing scenes.
+
+
+---------- Changes ----------
+Gameplay
+- Players will now remain in their current lobby after leaving an online match when it ends, so it's easier to continue
+playing with the other player.
+- Power-ups no longer spawn on the same player's turn more than once in a row.
+- Tethered counters that are pulled out of their tile will now move towards their connected counters that are 
+already moving rather than always towards a counter that's being flung.
+- Prevented floating block counters from being moved when using the fling power-up on them (unless the gravity
+strength is high enough) or flinging a counter that's tethered to them.
+- Collected power-ups are now removed from players when mutators are regenerated.
+- Power-up counters will no longer respawn when mutators are regenerated.
+- Turns will only end after all counters have stopped moving instead of as soon as a counter is placed.
+
+UI
+- The lobby screen is now automatically reopened when returning to the main menu from an online match if the player 
+is still connected to the lobby.
+- Hidden the side-panel's restart button when playing in an online match.
+- A mutator's help box now appears when also hovering over its name.
+- The power-up icons no longer appear in the side-panel if the relevant mutator is disabled.
+- The power-up selection wheel's buttons will now be un-interactable if the relevant power-up hasn't been collected by 
+the player.
+- Changed the background colours for the power-up selection wheel so it fits in better with the game's colour scheme.
+- The turn counter now starts on 1 instead of 0.
+- Improved scaling for UI elements that are part of a list when the screen size changes.
+- Improved scaling for scroll bars when the screen size changes.
+- Changed the background colour of all scroll bars to be near black instead of white.
+
+
+---------- Fixes ----------
+Gameplay Fixes
+- Fixed falling counters not scoring any points for blocking an opponent's potential scoring lines.
+- Fixed single tethered counters potentially never locking into a tile when dangling in mid-air from their connection.
+- Fixed tethered counters not locking into a tile when they're suspended from their connections and have no other 
+adjacent counters.
+- Fixed tethered counters not being assigned to a tile after being flung and landing on top of other counters.
+- Fixed counters that are moved with the fling power-up travelling in a straight line and leaving the grid if gravity 
+is disabled.
+- Fixed non-host clients not being able to return to the main menu.
+- Fixed instances of the fling power-up counter interfering with the flinging counters.
+- Fixed vertically aligned tethered counters thinking they're offset to the right from their connection.
+
+Networking Fixes
+- Network-objects spawned at runtime are now despawned when the host client disconnects from a lobby, loads a scene,
+or unloads a scene. This prevents non-host clients from triggering errors when trying to destroy those objects.
+- Fixed the 'network objects not cleaned up' error when the host client closes the gameplay scene.
+- Fixed clients not being disconnected properly when all other clients unexpectedly close their game e.g. pressing 
+Alt+F4.
+- Fixed a client's network ID being set to zero when the real ID cannot be obtained as they disconnect.
+- Fixed a case where joining clients wouldn't react to the host leaving the lobby.
+- Fixed joining clients not registering when they've finished loading a scene.
+- Fixed the host client disappearing from their own lobby when another player leaves it.
+- Fixed joining clients not disappearing on the host's lobby screen when they leave.
+- Fixed multiple lobbies being able to use the same name if they're both created around the same time.
+- Fixing the empty lobby details not being hidden when the client leaves a lobby after returning to the main menu from 
+a match.
+
+UI Fixes
+- Fixed the timeline showing the wrong order of turns after restarting a match.
+- Fixed consecutive turns for a single player appearing in the timeline when turns are taken in quick succession.
+- Fixed the timeline events permanently showing their placeholder icons.
+- Fixed the joining client's tiles not highlighting when they select a power-up.
+- Fixed the mutator list's scroll bar always moving the list to a position where it wasn't fully visible.
+- The side-panel's text element that shows the current turn is now reset after restarting a match.
+- Fixed the cursor being reverted to its default image while in an online match and after finishing it.
+- Fixed the option menu's SFX slider being very small and not centred.
+- Fixed several side-panel background counters' blur effects covering the tile grid.
+
+Other  Fixes
+- Fixed some code being executed multiple times when it was only needed once.
+- Many null reference fixes.
+
+Additionally, much work has been done to support the new content behind the scenes and lots of code has been 
+refactored so it's easier to maintain and expand certain aspects of the game going forward.
+
+Thanks for playing,
+Liam
