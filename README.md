@@ -1,6 +1,17 @@
 # ---------- Hello World ----------
 
-Hello, thank you for downloading and playing my game, I hope you enjoy it!
+Hello, it's free to play and features local & online multiplayer too!
+
+# ---------- About ----------
+This project is a free-to-play 4-in-a-row styled game with:
+- Local & online multiplayer
+- Power-ups
+- New mechanics
+
+# ---------- Gallery ----------
+![image](https://github.com/liambansal/4-In-A-Row/assets/55756009/030115bd-ba3e-4f32-a6cd-06a08ec5d7f4)
+![image](https://github.com/liambansal/4-In-A-Row/assets/55756009/2667ef24-91ad-4397-a804-c9c24f131862)
+![image](https://github.com/liambansal/4-In-A-Row/assets/55756009/c13f6250-170e-4b0c-bd72-d97e8b00e19d)
 
 # ---------- Download ----------
 
@@ -40,9 +51,7 @@ Unfortunately, a fix for these issues isn't known at the time of this update's r
 
 # ---------- Licensing ----------
 
-Explosion VFX created by Gustav Hagerling, available from: 
-	https://assetstore.unity.com/packages/vfx/particles/fire-explosions/explosive-toon-vfx-texture-free-11117
-Explosion Smoke VFX created by Maiami Studio, available from: 
-	https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-stylized-smoke-effects-pack-226406
-Good Times Font created by Typodermic Fonts, available from: https://www.dafont.com/good-times.font
-Sound Effects created by Ovani Sound, available from: https://ovanisound.com
+- Explosion VFX created by Gustav Hagerling, available from: https://assetstore.unity.com/packages/vfx/particles/fire-explosions/explosive-toon-vfx-texture-free-11117
+- Explosion Smoke VFX created by Maiami Studio, available from: https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-stylized-smoke-effects-pack-226406
+- Good Times Font created by Typodermic Fonts, available from: https://www.dafont.com/good-times.font
+- Sound Effects created by Ovani Sound, available from: https://ovanisound.com
