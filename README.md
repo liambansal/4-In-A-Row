@@ -1,7 +1,3 @@
-# ---------- Hello World ----------
-
-Hello, it's free to play and features local & online multiplayer too!
-
 # ---------- About ----------
 This project is a free-to-play 4-in-a-row styled game with:
 - Local & online multiplayer
