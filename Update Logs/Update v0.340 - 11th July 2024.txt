@@ -1,0 +1,51 @@
+Quality of Life Improvements
+11th July 2024 - v0.340
+
+~~~~~~~~~~ Description ~~~~~~~~~~
+Hello there, this update introduces several quality of life improvements and fixes, I hope you enjoy it!
+
+
+~~~~~~~~~~ Additions ~~~~~~~~~~
+- Tiles are now highlighted with a yellow outline when the cursor hovers over them.
+- Added two options to the pause menu that allow the player to toggle the selected tile's outline on/off and change
+its colour.
+- Added support for joining older compatible versions of the game when playing on a newer version (hover over game
+version text in main menu).
+- Added support for joining newer versions of the game when playing on an older version (hover over game version text 
+in main menu).
+- A message will now be displayed if the lobby that a player is trying to join is full.
+- Added an animated shadow under the game over menu.
+
+
+~~~~~~~~~~ Changes ~~~~~~~~~~
+- The game over menu can now be toggled on and off so players can see all of the counters after finishing a match.
+- The entire lobby search result will now be highlighted when the cursor hovers over them, clicks on them, and selects 
+them, instead of just the name.
+- Set a cooldown time for using the join lobby button to avoid surpassing a network rate limit.
+- Lobby passwords are now displayed in quotes.
+- All of the whitespace between elements in a lobby search result is now selectable.
+- Changed the appearance of the game's toggle buttons.
+- Changed the leave match button's text in the game over menu.
+
+
+~~~~~~~~~~ Fixes ~~~~~~~~~~
+- Fixed both clients disconnecting from the lobby when either of them closes their lobby menu.
+- Fixed counters sometimes locking into a tile when there's a moving counter below them.
+- Fixed stationary counters locking into a tile as soon as they start to move.
+- Fixed the game essentially pausing whenever a power-up was used or a points VFX was spawned.
+- Fixed the cursor not changing at the end of a turn in a local match when there's a points VFX playing.
+- Fixed counters scoring points for blocking when falling and landing on the end of a scoring line.
+- Fixed counters being checked for points in the wrong order after some have fallen.
+- Fixed the "404 Not Found" error triggering when a player attempts to join a lobby that's no longer open.
+- Fixed lobbies not being removed from the search results if they're not setup correctly.
+- Lobbies will now automatically be shutdown if the host client closes their lobby menu before the request to create 
+the lobby has resolved.
+- A client will now automatically leave a lobby upon joining it if they close their lobby menu before the request to 
+join the lobby has resolved.
+- Fixed the tile grid scaling incorrectly and being partially out of view when changing the application's window size.
+- Fixed players being able to change the mutator settings after a match has ended.
+- Fixed players being able to regenerate mutators after a match has ended.
+
+
+Until next time,
+Liam.
