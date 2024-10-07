@@ -31,19 +31,12 @@ Only the most recent version of the game will be fully supported with online gam
 
 # ---------- Known Issues ----------
 
-1. Playing the game with an active VPN connection or any background VPN processes running will interfere with and 
-most likely disable the game's online features. Therefore it's recommended to close any VPN as well as its background 
-processes before opening the game.
+1. Playing the game with an active VPN connection or any background VPN processes running will interfere with and most likely disable the game's online features. Therefore it's recommended to close any VPN as well as its background processes before opening the game.
 
-2. It's usually best to restart the application when an error is logged in the console window to ensure all of the 
-game's features work as intended. Some of these errors are:
+2. It's best to restart the application when specific errors are logged in the console. This ensures all of the game's features work as intended. These errors include but are probably not limited to:
 - Error: 'Received a packet with an invalid pipeline'.
-- Error: 'Resetting event queue with pending events'.
 
-Other errors are produced by:
-- Entering an incorrect password when joining a lobby.
-
-Unfortunately, a fix for these issues isn't known at the time of this update's release.
+Unfortunately, a fix for these issues isn't known at the time of the latest update's release.
 
 # ---------- Licensing ----------
 

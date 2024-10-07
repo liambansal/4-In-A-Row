@@ -1,0 +1,86 @@
+Customisable Match Settings and Improved Overall Stability
+7th October 2024 - v0.362
+
+~~~~~~~~~~ Description ~~~~~~~~~~
+Hi there, this update introduces a set of new options for customising the match settings before starting a match and
+many important fixes. The settings feature things like the score to win, grid size, all of the mutator options, and a 
+few presets for quickly selecting specific game types. Hope you enjoy!
+
+
+~~~~~~~~~~ Additions ~~~~~~~~~~
+- Created a menu for customizing the match settings before starting a local or online game.
+- Created a menu for changing the game settings from the main menu.
+- A prompt for confirming/cancelling important actions such as leaving a match or closing the game will now appear on-
+screen.
+- Added a new fullscreen window mode option in the game's settings menu.
+- Added a new option for toggling the confirm action prompt on/off in the game's settings menu.
+
+
+~~~~~~~~~~ Changes ~~~~~~~~~~
+- The mutator settings can now be changed from the main menu before starting a match.
+- Mutator settings can no longer be changed once a match has started.
+- Changed all text elements' fonts that display a lobby name or password so different character cases are noticeable.
+- The cursor helper icon now returns to the selected power-up after the ? icon disappears from hovering over a 
+mutator's help icon.
+- Improved the descriptions for all of the mutators.
+- The collected power-ups' background now shrinks when no power-ups are enabled.
+- Limited how many times the 'player ready' RPC can be sent to clients per second to prevent players from sending 
+unnecessary data.
+- Changed the default window mode to exclusive fullscreen.
+- Made more use of the available space in the main menu to make the menus larger.
+- UI elements in the main menu scene now scale better when the screen size changes.
+- Changed the floating blocks spawn animation to a fade-in effect.
+- Slightly improved the appearance of the lobby screen's backgrounds.
+- Changed the colour of several UI elements when they're not interactable.
+
+
+~~~~~~~~~~ Fixes ~~~~~~~~~~
+- Addressed the 'resetting event queue' error triggering when a player attempts to join a lobby by showing an error 
+message and then closing the application, so it's clear the game cannot be played if this error is ever triggered.
+- Reduced the chances of the 'received packet with invalid pipeline' error from occurring.
+- Fixed clients not disconnecting from their lobby when another client leaves while loading the gameplay scene.
+- Fixed the loading screen staying open indefinitely when another player disconnects before they start loading the 
+gameplay scene.
+- Fixed the '404 Not Found' error appearing when a player attempts to join a lobby that has closed but is still 
+visible in the lobby browser.
+- Fixed the query lobbies rate limit being reached.
+- Fixed several bugs relating to tethered counters not falling when they're supposed to.
+- Fixed mutator sound effects not playing after loading into a match for the second time.
+- Fixed counters getting pulled out of their tile when one of their tethered counters falls to gravity.
+- Fixed multiple counters being assigned to a single tile and overwriting each other.
+- Fixed counters not always appearing exactly on top of their tile. The host client and joining client must use the 
+same aspect ratio for their application to avoid this error.
+- Fixed several UI elements potentially appearing/stretching off-screen.
+- Fixed a network error triggering whenever a player attempted to join a lobby using the wrong password.
+- Fixed the host client being unable to return to the main menu through the game over menu after the joining 
+client has left the match.
+- An online match will now be cancelled as soon as the gameplay scene is loaded if a client disconnected during the 
+load process.
+- Fixed players getting too many points for their score streak when scoring multiple lines in a single turn.
+- Fixed blocked lines being highlighted and spawning point VFX when created at the same time as a scoring line.
+- Fixed the power-up icons not enabling when a match starts.
+- Fixed clients registering multiple callbacks to certain network events when creating a lobby, joining a lobby, or 
+leaving a lobby.
+- Fixed clients having to ready up multiple times before the connected clients received their ready state after the 
+first match.
+- Players no longer need to reselect a power-up to see which tiles it can interact with after an opponent places a 
+counter.
+- Players no longer need to reselect a power-up to see which tiles it can interact with after a counter has moved.
+- Fixed floating block counters not respawning when regenerating the mutators in a local match.
+- Fixed the '_MainTex property missing' error appearing because of the blur shader.
+- Fixed the scoreboard appearing in a new match when a match is restarted before the scoreboard appears on-screen.
+- Players can now see the lobby password after they've joined a lobby.
+- Fixed the power-up selection wheel's buttons staying enabled when the mutators are reset in a local match.
+- Fixed the cursor helper icon still showing the previously selected power-up when restarting a local match.
+- Fixed the cursor's helper icon disappearing when clicking on a tile without using the power-up in an online match.
+- Fixed the selected tile outline showing even when it's disabled in the settings.
+- Fixed the scoreboard playing the wrong animation and hiding as soon as it appears on screen.
+- Fixed the scoreboard only playing its spawn/reveal animation once across multiple matches.
+- Fixed the game still being paused after closing the pause menu through using its close button.
+- Fixed the trail emitter being turned on for the joining client's stationary power-ups.
+- Fixed the scoreboard's show/hide button only being highlighted once when hovering over it.
+- Fixed being able to scroll past the last element in the scoreboard.
+
+
+Until next time,
+Liam
